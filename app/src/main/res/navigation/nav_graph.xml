@@ -1,0 +1,31 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment"> <fragment
+    android:id="@+id/loginFragment"
+    android:name="com.example.cisquigo_tfg.ui.theme.LoginFragment"
+    android:label="Login"
+    tools:layout="@layout/login_fragment">
+    <action
+        android:id="@+id/accion_login_a_registro"
+        app:destination="@id/registrarseFragment" />
+    <action
+        android:id="@+id/accion_login_a_home"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" /> </fragment>
+
+    <fragment
+        android:id="@+id/registrarseFragment"
+        android:name="com.example.cisquigo_tfg.ui.theme.RegistrarseFragment"
+        android:label="Registro"
+        tools:layout="@layout/registrarse_fragment" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cisquigo_tfg.ui.theme.HomeFragment"
+        android:label="Restaurantes"
+        tools:layout="@layout/home_fragment" />
+
+</navigation>

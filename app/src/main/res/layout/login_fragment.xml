@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#4c2882">
+
+    <ImageView
+        android:id="@+id/ivLogoCisquiGo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/etCorreoLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"/>
+
+    <EditText
+        android:id="@+id/etContrasenaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_marginTop="12dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/btnEntrarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTRAR"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#6A1B9A"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvEnlaceRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes cuenta? Regístrate aquí"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFF"
+        android:textStyle="bold" />
+
+</LinearLayout>
