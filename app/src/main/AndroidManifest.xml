@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CisquiGo_TFG">
+        <activity android:name=".ui.theme.DetalleActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -21,7 +21,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
             android:text="Bienvenido, Usuario"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvRestaurantes"
-                    android:layout_width="match_parent"
+                    android:layout_width="426dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp" />
             </LinearLayout>

@@ -32,9 +32,9 @@ class RegistrarseFragment : Fragment(R.layout.registrarse_fragment) {
             if (nombre.isNotEmpty() && email.isNotEmpty() && contrasena.length >= 6 && tarjeta.length == 16) {
                 registrarUsuario(email, contrasena, nombre, tarjeta)
             } else {
-                val mensaje = if (contrasena.length < 6) "La contraseña debe tener 6 caracteres"
+                val mensaje = if (contrasena.length < 6) "La contraseña debe tener al menos 6 caracteres"
                 else if (tarjeta.length != 16) "La tarjeta debe tener 16 dígitos"
-                else "Completa todos los campos"
+                else "Por favor, completa todos los campos"
                 Toast.makeText(requireContext(), mensaje, Toast.LENGTH_SHORT).show()
             }
         }
@@ -56,19 +56,20 @@ class RegistrarseFragment : Fragment(R.layout.registrarse_fragment) {
                         .addOnSuccessListener {
                             // Verificación de seguridad para evitar crashes si el fragmento se cerró antes de terminar
                             if (isAdded) {
-                                Toast.makeText(requireContext(), "Registro exitoso", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(requireContext(), "Registro completado con éxito", Toast.LENGTH_SHORT).show()
                                 findNavController().popBackStack()
                             }
                         }
                         .addOnFailureListener { e ->
                             if (isAdded) {
-                                Toast.makeText(requireContext(), "Error en DB: ${e.message}", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(requireContext(), "Error en la base de datos: ${e.message}", Toast.LENGTH_SHORT).show()
                             }
                         }
                 }
             } else {
                 if (isAdded) {
-                    Toast.makeText(requireContext(), "Error: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                    // Aquí el mensaje de error de Firebase (task.exception) suele venir en inglés por defecto de la API
+                    Toast.makeText(requireContext(), "Error al registrar: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }

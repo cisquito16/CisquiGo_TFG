@@ -60,10 +60,9 @@ class HomeFragment : Fragment(R.layout.home_fragment) {
 
         val service = retrofit.create(YelpService::class.java)
 
-        // SOLUCIÓN AL 401: Añadimos "Bearer " antes del token aquí directamente
         val authHeader = "Bearer $TOKEN"
 
-        service.buscarRestaurantes(authHeader, "restaurants", "Madrid, Spain")
+        service.buscarRestaurantes(authHeader, "fast food", "Madrid, Spain")
             .enqueue(object : Callback<YelpResponse> {
                 override fun onResponse(call: Call<YelpResponse>, response: Response<YelpResponse>) {
                     if (response.isSuccessful) {

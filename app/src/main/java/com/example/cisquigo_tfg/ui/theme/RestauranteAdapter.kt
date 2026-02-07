@@ -1,5 +1,6 @@
 package com.example.cisquigo_tfg.ui.theme
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +20,8 @@ class RestauranteAdapter(private val restaurantes: List<Restaurante>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestauranteViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_restaurante, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_restaurante, parent, false)
         return RestauranteViewHolder(view)
     }
 
@@ -30,8 +32,18 @@ class RestauranteAdapter(private val restaurantes: List<Restaurante>) :
 
         Glide.with(holder.itemView.context)
             .load(res.image_url)
-            .centerCrop()
             .into(holder.imagen)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetalleActivity::class.java).apply {
+                putExtra("nombre", res.name)
+                putExtra("imagen", res.image_url)
+                putExtra("rating", res.rating)
+                putExtra("direccion", res.location.display_address.joinToString(", "))
+                putExtra("telefono", res.display_phone ?: "No disponible")
+                putExtra("categoria", res.categories.firstOrNull()?.title ?: "Restaurante")
+            }
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount() = restaurantes.size
