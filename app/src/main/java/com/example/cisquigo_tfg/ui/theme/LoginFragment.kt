@@ -27,7 +27,7 @@ class LoginFragment : Fragment(R.layout.login_fragment) {
             if (email.isNotEmpty() && pass.isNotEmpty()) {
                 auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        findNavController().navigate(R.id.accion_login_a_home)
+                        findNavController().navigate(R.id.action_login_to_home)
                     } else {
                         val error = task.exception?.message ?: "Error al entrar"
                         Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
@@ -39,7 +39,7 @@ class LoginFragment : Fragment(R.layout.login_fragment) {
         }
 
         binding.tvEnlaceRegistro.setOnClickListener {
-            findNavController().navigate(R.id.accion_login_a_registro)
+            findNavController().navigate(R.id.action_login_a_register)
         }
     }
 

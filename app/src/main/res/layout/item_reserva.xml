@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNombreRestaurante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/btnBorrarReserva"
+                android:layout_alignParentStart="true"
+                android:text="Nombre del Restaurante"
+                android:textColor="#2C3E50"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnBorrarReserva"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:text="Cancelar"
+                android:backgroundTint="#C0392B"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:padding="0dp"
+                app:cornerRadius="8dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvFechaReserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Fecha"
+            android:textColor="#E5D3B3"
+            android:textStyle="bold" /> <TextView
+        android:id="@+id/tvDireccionReserva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Dirección"
+        android:textColor="#7F8C8D"
+        android:textSize="13sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

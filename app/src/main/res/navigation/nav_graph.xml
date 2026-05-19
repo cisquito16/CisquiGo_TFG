@@ -1,20 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment"> <fragment
-    android:id="@+id/loginFragment"
-    android:name="com.example.cisquigo_tfg.ui.theme.LoginFragment"
-    android:label="Login"
-    tools:layout="@layout/login_fragment">
-    <action
-        android:id="@+id/accion_login_a_registro"
-        app:destination="@id/registrarseFragment" />
-    <action
-        android:id="@+id/accion_login_a_home"
-        app:destination="@id/homeFragment"
-        app:popUpTo="@id/loginFragment"
-        app:popUpToInclusive="true" /> </fragment>
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.cisquigo_tfg.ui.theme.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_a_register"
+            app:destination="@id/registrarseFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/registrarseFragment"
@@ -26,6 +30,26 @@
         android:id="@+id/homeFragment"
         android:name="com.example.cisquigo_tfg.ui.theme.HomeFragment"
         android:label="Restaurantes"
-        tools:layout="@layout/home_fragment" />
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_home_to_favoritos"
+            app:destination="@id/favoritosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="com.example.cisquigo_tfg.ui.fragments.FavoritosFragment"
+        android:label="Mis Favoritos"
+        tools:layout="@layout/favorito_fragment">
+        <action
+            android:id="@+id/action_favoritos_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificacionesFragment"
+        android:name="com.example.cisquigo_tfg.ui.fragments.NotificacionesFragment"
+        android:label="Mis Reservas"
+        tools:layout="@layout/fragment_notificaciones" />
 
 </navigation>

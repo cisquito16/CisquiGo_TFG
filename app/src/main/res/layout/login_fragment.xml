@@ -1,54 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="32dp"
     android:gravity="center"
-    android:background="#4c2882">
-
-    <ImageView
-        android:id="@+id/ivLogoCisquiGo"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/logo" />
+    android:background="#F4F4F4"> <ImageView
+    android:id="@+id/ivLogoCisquiGo"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:layout_marginBottom="40dp"
+    android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/etCorreoLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
+        android:layout_height="55dp"
         android:hint="Correo electrónico"
+        android:textColorHint="#7F8C8D"
+        android:textColor="#2C3E50"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"/>
+        android:backgroundTint="#34495E"
+        android:paddingStart="12dp"
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/etContrasenaLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/white"
+        android:layout_height="55dp"
         android:hint="Contraseña"
+        android:textColorHint="#7F8C8D"
+        android:textColor="#2C3E50"
         android:inputType="textPassword"
-        android:layout_marginTop="12dp"
-        android:minHeight="48dp"/>
+        android:backgroundTint="#34495E"
+        android:paddingStart="12dp"
+        android:layout_marginTop="12dp"/>
 
     <Button
         android:id="@+id/btnEntrarLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="ENTRAR"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#6A1B9A"
-        android:textColor="#FFFFFF" />
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#E5D3B3"
+        android:textColor="#2C3E50"
+        android:textStyle="bold"
+        app:cornerRadius="12dp" />
 
     <TextView
         android:id="@+id/tvEnlaceRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¿No tienes cuenta? Regístrate aquí"
-        android:layout_marginTop="16dp"
-        android:textColor="#FFFF"
+        android:layout_marginTop="24dp"
+        android:textColor="#34495E"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
 </LinearLayout>
