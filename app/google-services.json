@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "800260300584",
+    "project_id": "cisquigo",
+    "storage_bucket": "cisquigo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800260300584:android:88fcb625e588614892ba1d",
+        "android_client_info": {
+          "package_name": "com.example.cisquigo_tfg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGIy-kCLlzMyADdLds_3dg9SQqd1xmrPM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
